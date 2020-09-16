@@ -26,4 +26,5 @@ export const Content = styled.div`
   width: 100%;
   max-height: 80%;
   height: 100%;
+  overflow: auto;
 `;
