@@ -28,6 +28,8 @@ interface DataContextState {
   getActiveUser(): UserData | null;
   getActiveStageRun(): Stages | null;
   setIntroductionData(stages: Stage): void;
+  setStage01Data(stages: Stage): void;
+  setStage02Data(stages: Stage): void;
 }
 
 interface CreateUserParams {
@@ -121,6 +123,36 @@ export const DataProvider: FC = ({ children }) => {
     setUsersData(updatedUsersData);
   }
 
+  function setStage01Data({ totalGuesses, totalTimeSeconds }: Stage) {
+    const stageRun = getActiveStageRun();
+    const updatedUsersData = [...usersData];
+
+    updatedUsersData[activeUserIndex].stageRuns[activeStageRunIndex] = {
+      ...stageRun,
+      stage1: {
+        totalGuesses,
+        totalTimeSeconds,
+      },
+    };
+
+    setUsersData(updatedUsersData);
+  }
+
+  function setStage02Data({ totalGuesses, totalTimeSeconds }: Stage) {
+    const stageRun = getActiveStageRun();
+    const updatedUsersData = [...usersData];
+
+    updatedUsersData[activeUserIndex].stageRuns[activeStageRunIndex] = {
+      ...stageRun,
+      stage2: {
+        totalGuesses,
+        totalTimeSeconds,
+      },
+    };
+
+    setUsersData(updatedUsersData);
+  }
+
   return (
     <DataContext.Provider
       value={{
@@ -129,6 +161,8 @@ export const DataProvider: FC = ({ children }) => {
         getActiveUser,
         getActiveStageRun,
         setIntroductionData,
+        setStage01Data,
+        setStage02Data,
       }}
     >
       {children}

@@ -23,19 +23,19 @@ const Stats: FC = () => {
           <StatsCard key={`${user.name}_${i}`}>
             <StatsCardTitle>Jogador: {user.name}</StatsCardTitle>
             {user.stageRuns.map((stageRun, j) => (
-              <GameStats>
+              <GameStats key={j}>
                 <GameStatsTitle>Jogo {j + 1}</GameStatsTitle>
                 <GameStatsContent>
                   {stageRun.introduction ? (
                     <GameStatsItem>
                       <p>Introdução</p>
                       <p>
-                        Número de tentativas:{' '}
+                        Número de tentativas:
                         {stageRun.introduction?.totalGuesses}
                       </p>
                       <p>
-                        Duração:{' '}
-                        {Math.floor(stageRun.introduction?.totalTimeSeconds)}{' '}
+                        Duração:
+                        {Math.floor(stageRun.introduction?.totalTimeSeconds)}
                         segundos
                       </p>
                     </GameStatsItem>
@@ -44,30 +44,30 @@ const Stats: FC = () => {
                       <p>* Introdução não finalizada</p>
                     </GameStatsItem>
                   )}
-                  {stageRun.introduction ? (
+                  {stageRun.stage1 ? (
                     <GameStatsItem>
                       <p>Segunda fase</p>
                       <p>
-                        Número de tentativas:{' '}
-                        {stageRun.introduction?.totalGuesses}
+                        Número de tentativas:
+                        {stageRun.stage1?.totalGuesses}
                       </p>
                       <p>
-                        Duração:{' '}
-                        {Math.floor(stageRun.introduction?.totalTimeSeconds)}{' '}
+                        Duração:
+                        {Math.floor(stageRun.stage1?.totalTimeSeconds)}
                         segundos
                       </p>
                     </GameStatsItem>
                   ) : null}
-                  {stageRun.introduction ? (
+                  {stageRun.stage2 ? (
                     <GameStatsItem>
                       <p>Terceira fase</p>
                       <p>
-                        Número de tentativas:{' '}
-                        {stageRun.introduction?.totalGuesses}
+                        Número de tentativas:
+                        {stageRun.stage2?.totalGuesses}
                       </p>
                       <p>
-                        Duração:{' '}
-                        {Math.floor(stageRun.introduction?.totalTimeSeconds)}{' '}
+                        Duração:
+                        {Math.floor(stageRun.stage2?.totalTimeSeconds)}
                         segundos
                       </p>
                     </GameStatsItem>

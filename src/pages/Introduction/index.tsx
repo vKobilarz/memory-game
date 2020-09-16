@@ -1,5 +1,7 @@
 import React, { FC, useMemo, useState } from 'react';
 
+import { useHistory } from 'react-router-dom';
+
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
 
@@ -10,12 +12,17 @@ import Card from '../../components/Card';
 import { useData } from '../../hooks/DataContext';
 
 import { Content, CardContainer } from './styles';
+import SelectedCardPanel from '../../components/SelectedCardPanel';
 
 const Introduction: FC = () => {
   const { setIntroductionData } = useData();
+  const history = useHistory();
 
   const startDate = useMemo<Date>(() => new Date(), []);
 
+  const [selectedCardPanel, setSelectedCardPanel] = useState<ICard | null>(
+    null,
+  );
   const [cards, setCards] = useState<ICard[]>(() => {
     const shuffledCards = [...cardsData, ...cardsData];
 
@@ -33,6 +40,8 @@ const Introduction: FC = () => {
         totalGuesses: attempts,
         totalTimeSeconds: totalTime / 1000,
       });
+
+      history.push('/stage01');
     }
   }
 
@@ -63,8 +72,11 @@ const Introduction: FC = () => {
       };
     });
     setTimeout(() => {
+      if (successOnGuess) {
+        setSelectedCardPanel(selectedCards[0]);
+      }
+
       setCards(updatedCards);
-      checkIfUserWonTheStage(updatedCards);
     }, 2000);
   }
 
@@ -91,18 +103,31 @@ const Introduction: FC = () => {
     checkIfUserWonTheRound(updatedCards);
   }
 
+  function handlePanelClick() {
+    setSelectedCardPanel(null);
+
+    checkIfUserWonTheStage(cards);
+  }
+
   return (
     <Container>
       <CardContainer>
-        <Content>
-          {cards.map((card, i) => (
-            <Card
-              key={`${card.name}_${i}`}
-              {...card}
-              flipCard={() => flipCard(i)}
-            />
-          ))}
-        </Content>
+        {selectedCardPanel ? (
+          <SelectedCardPanel
+            {...selectedCardPanel}
+            onClick={handlePanelClick}
+          />
+        ) : (
+          <Content>
+            {cards.map((card, i) => (
+              <Card
+                key={`${card.name}_${i}`}
+                {...card}
+                flipCard={() => flipCard(i)}
+              />
+            ))}
+          </Content>
+        )}
       </CardContainer>
     </Container>
   );
