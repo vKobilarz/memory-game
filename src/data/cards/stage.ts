@@ -1,16 +1,16 @@
 import IronForkImg from '../../assets/stage/iron-fork.jpg';
 import IronKeyImg from '../../assets/stage/iron-key.png';
-import IronKnifeImg from '../../assets/stage/iron-knife.jpg';
+import IronKnifeImg from '../../assets/stage/iron-knife.png';
 import IronNailImg from '../../assets/stage/iron-nail.png';
-import IronCrewImg from '../../assets/stage/iron-screw.jpg';
+import IronCrewImg from '../../assets/stage/iron-screw.png';
 import IronSpoonImg from '../../assets/stage/iron-spoon.png';
 import IronTableImg from '../../assets/stage/iron-table.png';
 import WoodenIronChairImg from '../../assets/stage/wooden-iron-chair.png';
 
-import WoodenBedImg from '../../assets/stage/wooden-bed.jpg';
+import WoodenBedImg from '../../assets/stage/wooden-bed.png';
 import WoodenChairImg from '../../assets/stage/wooden-chair.png';
-import WoodenDoorImg from '../../assets/stage/wooden-door.jpg';
-import WoodenTableImg from '../../assets/stage/wooden-table.jpg';
+import WoodenDoorImg from '../../assets/stage/wooden-door.png';
+import WoodenTableImg from '../../assets/stage/wooden-table.png';
 import WoodenWardrobeImg from '../../assets/stage/wooden-wardrobe.png';
 
 import PaperBagImg from '../../assets/stage/paper-bag.png';
@@ -31,12 +31,12 @@ import PlasticSyringeImg from '../../assets/stage/plastic-syringe.png';
 import PlasticTelephoneImg from '../../assets/stage/plastic-telephone.png';
 
 import GlassBottleImg from '../../assets/stage/glass-bottle.png';
-import GlassBowlImg from '../../assets/stage/glass-bowl.jpg';
+import GlassBowlImg from '../../assets/stage/glass-bowl.png';
 import GlassCupImg from '../../assets/stage/glass-cup.png';
 import GlassDishImg from '../../assets/stage/glass-dish.png';
-import GlassLampImg from '../../assets/stage/glass-lamp.jpg';
-import GlassMateImg from '../../assets/stage/glass-mate.jpg';
-import GlassMirrorImg from '../../assets/stage/glass-mirror.jpg';
+import GlassLampImg from '../../assets/stage/glass-lamp.png';
+import GlassMateImg from '../../assets/stage/glass-mate.png';
+import GlassMirrorImg from '../../assets/stage/glass-mirror.png';
 import GlassPlatterImg from '../../assets/stage/glass-platter.png';
 
 import Card from '../../interfaces/Card';
