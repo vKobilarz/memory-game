@@ -44,20 +44,146 @@ const Stats: FC = () => {
                       <p>* Introdução não finalizada</p>
                     </GameStatsItem>
                   )}
-                  {/* {stageRun.stage2 ? (
+                  {stageRun.wood1 && (
                     <GameStatsItem>
-                      <p>Terceira fase</p>
+                      <p>Madeira I</p>
                       <p>
                         Número de tentativas:
-                        {stageRun.stage2?.totalGuesses}
+                        {stageRun.wood1?.totalGuesses}
                       </p>
                       <p>
                         Duração:
-                        {Math.floor(stageRun.stage2?.totalTimeSeconds)}
+                        {Math.floor(stageRun.wood1?.totalTimeSeconds)}
                         segundos
                       </p>
                     </GameStatsItem>
-                  ) : null} */}
+                  )}
+                  {stageRun.paper1 && (
+                    <GameStatsItem>
+                      <p>Papel I</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.paper1?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.paper1?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.glass1 && (
+                    <GameStatsItem>
+                      <p>Vidro I</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.glass1?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.glass1?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.iron1 && (
+                    <GameStatsItem>
+                      <p>Ferro I</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.iron1?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.iron1?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.plastic1 && (
+                    <GameStatsItem>
+                      <p>Plástico I</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.plastic1?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.plastic1?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.wood2 && (
+                    <GameStatsItem>
+                      <p>Madeira II</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.wood2?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.wood2?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.paper2 && (
+                    <GameStatsItem>
+                      <p>Papel II</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.paper2?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.paper2?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.glass2 && (
+                    <GameStatsItem>
+                      <p>Vidro II</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.glass2?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.glass2?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.iron2 && (
+                    <GameStatsItem>
+                      <p>Ferro II</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.iron2?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.iron2?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
+                  {stageRun.plastic2 && (
+                    <GameStatsItem>
+                      <p>Plástico II</p>
+                      <p>
+                        Número de tentativas:
+                        {stageRun.plastic2?.totalGuesses}
+                      </p>
+                      <p>
+                        Duração:
+                        {Math.floor(stageRun.plastic2?.totalTimeSeconds)}
+                        segundos
+                      </p>
+                    </GameStatsItem>
+                  )}
                 </GameStatsContent>
               </GameStats>
             ))}

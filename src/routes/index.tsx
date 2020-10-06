@@ -15,6 +15,7 @@ import Paper02 from '../pages/Paper02';
 import Glass02 from '../pages/Glass02';
 import Iron02 from '../pages/Iron02';
 import Plastic02 from '../pages/Plastic02';
+import FinishedGame from '../pages/FinishedGame';
 
 const Routes: FC = () => (
   <Switch>
@@ -32,6 +33,7 @@ const Routes: FC = () => (
     <Route path="/glass02" component={Glass02} />
     <Route path="/iron02" component={Iron02} />
     <Route path="/plastic02" component={Plastic02} />
+    <Route path="/finished-game" component={FinishedGame} />
   </Switch>
 );
 

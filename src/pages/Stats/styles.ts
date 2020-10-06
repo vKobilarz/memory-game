@@ -35,4 +35,5 @@ export const GameStatsContent = styled.div`
 
 export const GameStatsItem = styled.div`
   font-size: 20px;
+  padding: 16px;
 `;

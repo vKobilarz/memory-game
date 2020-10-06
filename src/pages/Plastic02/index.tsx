@@ -47,7 +47,7 @@ const Plastic02: FC = () => {
         stage: 'plastic2',
       });
 
-      history.push('/');
+      history.push('/finished-game');
     }
   }
 
