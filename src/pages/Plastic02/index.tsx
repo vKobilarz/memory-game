@@ -36,7 +36,9 @@ const Plastic02: FC = () => {
   const [lostPanel, setLostPanel] = useState(false);
 
   function checkIfUserWonTheStage(cards: ICard[]) {
-    const notHiddenCards = cards.filter(c => !c.isHidden);
+    const notHiddenCards = cards.filter(
+      c => !c.isHidden && c.type.some(ct => ct === type),
+    );
 
     const totalTime = new Date().getTime() - startDate.getTime();
 
