@@ -44,21 +44,7 @@ const Stats: FC = () => {
                       <p>* Introdução não finalizada</p>
                     </GameStatsItem>
                   )}
-                  {stageRun.stage1 ? (
-                    <GameStatsItem>
-                      <p>Segunda fase</p>
-                      <p>
-                        Número de tentativas:
-                        {stageRun.stage1?.totalGuesses}
-                      </p>
-                      <p>
-                        Duração:
-                        {Math.floor(stageRun.stage1?.totalTimeSeconds)}
-                        segundos
-                      </p>
-                    </GameStatsItem>
-                  ) : null}
-                  {stageRun.stage2 ? (
+                  {/* {stageRun.stage2 ? (
                     <GameStatsItem>
                       <p>Terceira fase</p>
                       <p>
@@ -71,7 +57,7 @@ const Stats: FC = () => {
                         segundos
                       </p>
                     </GameStatsItem>
-                  ) : null}
+                  ) : null} */}
                 </GameStatsContent>
               </GameStats>
             ))}

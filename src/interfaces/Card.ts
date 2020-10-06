@@ -4,4 +4,5 @@ export default interface Card {
   isActive: boolean;
   isHidden: boolean;
   description: string;
+  type: ('primary' | 'wood' | 'paper' | 'glass' | 'iron' | 'plastic')[]
 }

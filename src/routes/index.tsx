@@ -5,8 +5,16 @@ import Home from '../pages/Home';
 import Stats from '../pages/Stats';
 import Instructions from '../pages/Instructions';
 import Introduction from '../pages/Introduction';
-import Stage01 from '../pages/Stage01';
-import Stage02 from '../pages/Stage02';
+import Wood01 from '../pages/Wood01';
+import Paper01 from '../pages/Paper01';
+import Glass01 from '../pages/Glass01';
+import Iron01 from '../pages/Iron01';
+import Plastic01 from '../pages/Plastic01';
+import Wood02 from '../pages/Wood02';
+import Paper02 from '../pages/Paper02';
+import Glass02 from '../pages/Glass02';
+import Iron02 from '../pages/Iron02';
+import Plastic02 from '../pages/Plastic02';
 
 const Routes: FC = () => (
   <Switch>
@@ -14,8 +22,16 @@ const Routes: FC = () => (
     <Route path="/instructions" component={Instructions} />
     <Route path="/stats" component={Stats} />
     <Route path="/introduction" component={Introduction} />
-    <Route path="/stage01" component={Stage01} />
-    <Route path="/stage02" component={Stage02} />
+    <Route path="/wood01" component={Wood01} />
+    <Route path="/paper01" component={Paper01} />
+    <Route path="/glass01" component={Glass01} />
+    <Route path="/iron01" component={Iron01} />
+    <Route path="/plastic01" component={Plastic01} />
+    <Route path="/wood02" component={Wood02} />
+    <Route path="/paper02" component={Paper02} />
+    <Route path="/glass02" component={Glass02} />
+    <Route path="/iron02" component={Iron02} />
+    <Route path="/plastic02" component={Plastic02} />
   </Switch>
 );
 

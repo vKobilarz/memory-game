@@ -12,6 +12,25 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+`;
+
+export const TitleContainer = styled.div`
+  border-radius: 8px;
+  border: 3px solid gray;
+  background-color: rgba(240, 240, 240, 0.95);
+
+  max-width: 1120px;
+  width: 100%;
+  max-height: 10%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #435049;
+  font-size: 38px;
 `;
 
 export const Content = styled.div`

@@ -1,20 +1,22 @@
 import React, { FC, useMemo, useState } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
 
-import cardsData from '../../data/cards/introduction';
-import shuffleArray from '../../utils/shuffleArray';
+import { getCardsByStage } from '../../data/cards/stage';
 import getActiveCards from '../../utils/getActiveCards';
 import Card from '../../components/Card';
 import { useData } from '../../hooks/DataContext';
-
-import { Content, CardContainer } from './styles';
 import SelectedCardPanel from '../../components/SelectedCardPanel';
 
-const Introduction: FC = () => {
+import { Content, CardContainer, LostPanelContainer } from './styles';
+
+const type = 'wood';
+const title = 'SELECIONE SOMENTE OS OBJETOS DE MADEIRA';
+
+const Wood02: FC = () => {
   const { setStageData } = useData();
   const history = useHistory();
 
@@ -24,11 +26,14 @@ const Introduction: FC = () => {
     null,
   );
   const [cards, setCards] = useState<ICard[]>(() => {
-    const shuffledCards = [...cardsData, ...cardsData];
-    console.log(shuffledCards);
-    return shuffleArray(shuffledCards);
+    const cards = getCardsByStage({ type: 'wood', stage: 2 });
+    console.log(cards);
+    return cards;
   });
   const [attempts, setAttempts] = useState(0);
+
+  const [errorMessage, setErrorMessage] = useState('');
+  const [lostPanel, setLostPanel] = useState(false);
 
   function checkIfUserWonTheStage(cards: ICard[]) {
     const notHiddenCards = cards.filter(c => !c.isHidden);
@@ -39,10 +44,10 @@ const Introduction: FC = () => {
       setStageData({
         totalGuesses: attempts,
         totalTimeSeconds: totalTime / 1000,
-        stage: 'introduction',
+        stage: 'wood2',
       });
 
-      history.push('/wood01');
+      history.push('/paper02');
     }
   }
 
@@ -72,9 +77,23 @@ const Introduction: FC = () => {
         isHidden: successOnGuess,
       };
     });
+
     setTimeout(() => {
       if (successOnGuess) {
-        setSelectedCardPanel(selectedCards[0]);
+        const playerLostTheGame =
+          updatedCards.filter(
+            uc => !uc.isHidden && uc.type.some(t => t !== type),
+          ).length === 0;
+
+        if (playerLostTheGame) {
+          setLostPanel(playerLostTheGame);
+        } else {
+          setSelectedCardPanel(selectedCards[0]);
+
+          setErrorMessage(
+            selectedCards[0].type.some(t => t !== type) ? title : '',
+          );
+        }
       }
 
       setCards(updatedCards);
@@ -111,11 +130,17 @@ const Introduction: FC = () => {
   }
 
   return (
-    <Container>
+    <Container title={title}>
       <CardContainer>
-        {selectedCardPanel ? (
+        {lostPanel ? (
+          <LostPanelContainer>
+            <h4>VOCÊ SELECIONOU TODOS OS ITENS INCORRETOS E PERDEU A FASE.</h4>
+            <Link to="/">CONTINUAR</Link>
+          </LostPanelContainer>
+        ) : selectedCardPanel ? (
           <SelectedCardPanel
             {...selectedCardPanel}
+            errorMessage={errorMessage}
             onClick={handlePanelClick}
           />
         ) : (
@@ -134,4 +159,4 @@ const Introduction: FC = () => {
   );
 };
 
-export default Introduction;
+export default Wood02;

@@ -13,8 +13,16 @@ interface Stage {
 
 interface Stages {
   introduction?: Stage;
-  stage1?: Stage;
-  stage2?: Stage;
+  wood1?: Stage;
+  paper1?: Stage;
+  glass1?: Stage;
+  iron1?: Stage;
+  plastic1?: Stage;
+  wood2?: Stage;
+  paper2?: Stage;
+  glass2?: Stage;
+  iron2?: Stage;
+  plastic2?: Stage;
 }
 
 interface UserData {
@@ -27,9 +35,11 @@ interface DataContextState {
   createUser(params: CreateUserParams): void;
   getActiveUser(): UserData | null;
   getActiveStageRun(): Stages | null;
-  setIntroductionData(stages: Stage): void;
-  setStage01Data(stages: Stage): void;
-  setStage02Data(stages: Stage): void;
+  setStageData(stages: ISetStageData): void;
+}
+
+interface ISetStageData extends Stage {
+  stage: 'introduction' | 'wood1' | 'paper1' | 'glass1' | 'iron1' | 'plastic1' | 'wood2' | 'paper2' | 'glass2' | 'iron2' | 'plastic2'
 }
 
 interface CreateUserParams {
@@ -108,43 +118,13 @@ export const DataProvider: FC = ({ children }) => {
     return activeStageRun || null;
   }
 
-  function setIntroductionData({ totalGuesses, totalTimeSeconds }: Stage) {
+  function setStageData({ totalGuesses, totalTimeSeconds, stage }: ISetStageData) {
     const stageRun = getActiveStageRun();
     const updatedUsersData = [...usersData];
 
     updatedUsersData[activeUserIndex].stageRuns[activeStageRunIndex] = {
       ...stageRun,
-      introduction: {
-        totalGuesses,
-        totalTimeSeconds,
-      },
-    };
-
-    setUsersData(updatedUsersData);
-  }
-
-  function setStage01Data({ totalGuesses, totalTimeSeconds }: Stage) {
-    const stageRun = getActiveStageRun();
-    const updatedUsersData = [...usersData];
-
-    updatedUsersData[activeUserIndex].stageRuns[activeStageRunIndex] = {
-      ...stageRun,
-      stage1: {
-        totalGuesses,
-        totalTimeSeconds,
-      },
-    };
-
-    setUsersData(updatedUsersData);
-  }
-
-  function setStage02Data({ totalGuesses, totalTimeSeconds }: Stage) {
-    const stageRun = getActiveStageRun();
-    const updatedUsersData = [...usersData];
-
-    updatedUsersData[activeUserIndex].stageRuns[activeStageRunIndex] = {
-      ...stageRun,
-      stage2: {
+      [stage]: {
         totalGuesses,
         totalTimeSeconds,
       },
@@ -160,9 +140,7 @@ export const DataProvider: FC = ({ children }) => {
         createUser,
         getActiveUser,
         getActiveStageRun,
-        setIntroductionData,
-        setStage01Data,
-        setStage02Data,
+        setStageData,
       }}
     >
       {children}

@@ -1,21 +1,23 @@
 import React, { FC, useMemo, useState } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
 
-import cardsData from '../../data/cards/stage';
-import shuffleArray from '../../utils/shuffleArray';
+import { getCardsByStage } from '../../data/cards/stage';
 import getActiveCards from '../../utils/getActiveCards';
 import Card from '../../components/Card';
 import { useData } from '../../hooks/DataContext';
-
-import { Content, CardContainer } from './styles';
 import SelectedCardPanel from '../../components/SelectedCardPanel';
 
-const Stage01: FC = () => {
-  const { setStage01Data } = useData();
+import { Content, CardContainer, LostPanelContainer } from './styles';
+
+const type = 'iron';
+const title = 'SELECIONE SOMENTE OS OBJETOS DE FERRO';
+
+const Iron01: FC = () => {
+  const { setStageData } = useData();
   const history = useHistory();
 
   const startDate = useMemo<Date>(() => new Date(), []);
@@ -24,16 +26,14 @@ const Stage01: FC = () => {
     null,
   );
   const [cards, setCards] = useState<ICard[]>(() => {
-    const shuffledCards = shuffleArray(cardsData).slice(cardsData.length - 8);
-
-    const slicedCards: ICard[] = shuffleArray([
-      ...shuffledCards,
-      ...shuffledCards,
-    ]);
-
-    return slicedCards;
+    const cards = getCardsByStage({ type: 'iron', stage: 1 });
+    console.log(cards);
+    return cards;
   });
   const [attempts, setAttempts] = useState(0);
+
+  const [errorMessage, setErrorMessage] = useState('');
+  const [lostPanel, setLostPanel] = useState(false);
 
   function checkIfUserWonTheStage(cards: ICard[]) {
     const notHiddenCards = cards.filter(c => !c.isHidden);
@@ -41,12 +41,13 @@ const Stage01: FC = () => {
     const totalTime = new Date().getTime() - startDate.getTime();
 
     if (notHiddenCards.length === 0) {
-      setStage01Data({
+      setStageData({
         totalGuesses: attempts,
         totalTimeSeconds: totalTime / 1000,
+        stage: 'iron1',
       });
 
-      history.push('/stage02');
+      history.push('/plastic01');
     }
   }
 
@@ -76,9 +77,23 @@ const Stage01: FC = () => {
         isHidden: successOnGuess,
       };
     });
+
     setTimeout(() => {
       if (successOnGuess) {
-        setSelectedCardPanel(selectedCards[0]);
+        const playerLostTheGame =
+          updatedCards.filter(
+            uc => !uc.isHidden && uc.type.some(t => t !== type),
+          ).length === 0;
+
+        if (playerLostTheGame) {
+          setLostPanel(playerLostTheGame);
+        } else {
+          setSelectedCardPanel(selectedCards[0]);
+
+          setErrorMessage(
+            selectedCards[0].type.some(t => t !== type) ? title : '',
+          );
+        }
       }
 
       setCards(updatedCards);
@@ -115,11 +130,17 @@ const Stage01: FC = () => {
   }
 
   return (
-    <Container>
+    <Container title={title}>
       <CardContainer>
-        {selectedCardPanel ? (
+        {lostPanel ? (
+          <LostPanelContainer>
+            <h4>VOCÊ SELECIONOU TODOS OS ITENS INCORRETOS E PERDEU A FASE.</h4>
+            <Link to="/">CONTINUAR</Link>
+          </LostPanelContainer>
+        ) : selectedCardPanel ? (
           <SelectedCardPanel
             {...selectedCardPanel}
+            errorMessage={errorMessage}
             onClick={handlePanelClick}
           />
         ) : (
@@ -138,4 +159,4 @@ const Stage01: FC = () => {
   );
 };
 
-export default Stage01;
+export default Iron01;

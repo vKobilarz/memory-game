@@ -1,10 +1,19 @@
 import React, { FC } from 'react';
 
-import { Container as ContainerStyle, Content } from './styles';
+import { Container as ContainerStyle, Content, TitleContainer } from './styles';
 
-const Container: FC = ({ children }) => {
+interface IContainer {
+  title?: string;
+}
+
+const Container: FC<IContainer> = ({ children, title }) => {
   return (
     <ContainerStyle>
+      {title && (
+        <TitleContainer>
+          <h4>{title}</h4>
+        </TitleContainer>
+      )}
       <Content>{children}</Content>
     </ContainerStyle>
   );
