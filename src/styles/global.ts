@@ -24,8 +24,9 @@ export default createGlobalStyle`
     font-size: 16px;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
+  h1, h2, h3, h4, h5, h6, p, a, button, input {
+    font-weight: 700;
+    padding: 12px
   }
 
   button {
