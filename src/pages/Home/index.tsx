@@ -14,7 +14,10 @@ const Home = () => {
           <h2>INICIAR</h2>
         </Link>
         <Link to={'/stats'}>
-          <h3>RELATORIOS</h3>
+          <h3>RELATÓRIOS</h3>
+        </Link>
+        <Link to={'/credits'}>
+          <h3>CRÉDITOS</h3>
         </Link>
       </Content>
     </Container>

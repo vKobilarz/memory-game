@@ -16,12 +16,14 @@ import Glass02 from '../pages/Glass02';
 import Iron02 from '../pages/Iron02';
 import Plastic02 from '../pages/Plastic02';
 import FinishedGame from '../pages/FinishedGame';
+import Credits from '../pages/Credits';
 
 const Routes: FC = () => (
   <Switch>
     <Route path="/" exact component={Home} />
     <Route path="/instructions" component={Instructions} />
     <Route path="/stats" component={Stats} />
+    <Route path="/credits" component={Credits} />
     <Route path="/introduction" component={Introduction} />
     <Route path="/wood01" component={Wood01} />
     <Route path="/paper01" component={Paper01} />
