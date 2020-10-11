@@ -13,6 +13,9 @@ const Home = () => {
         <Link to="/instructions">
           <h2>INICIAR</h2>
         </Link>
+        <Link to={'/tutorial'}>
+          <h3>TUTORIAL</h3>
+        </Link>
         <Link to={'/stats'}>
           <h3>RELATÓRIOS</h3>
         </Link>
