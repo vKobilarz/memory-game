@@ -8,6 +8,7 @@ import Card from '../../interfaces/Card';
 
 const cards: Card[] = [
   {
+    title: 'Vidro'.toUpperCase(),
     name: 'glass',
     image: GlassImg,
     isActive: false,
@@ -16,6 +17,7 @@ const cards: Card[] = [
     type: ['primary']
   },
   {
+    title: 'Ferro'.toUpperCase(),
     name: 'iron',
     image: IronImg,
     isActive: false,
@@ -24,6 +26,7 @@ const cards: Card[] = [
     type: ['primary']
   },
   {
+    title: 'Papel'.toUpperCase(),
     name: 'paper',
     image: PaperImg,
     isActive: false,
@@ -32,6 +35,7 @@ const cards: Card[] = [
     type: ['primary']
   },
   {
+    title: 'Plástico'.toUpperCase(),
     name: 'plastic',
     image: PlasticImg,
     isActive: false,
@@ -40,6 +44,7 @@ const cards: Card[] = [
     type: ['primary']
   },
   {
+    title: 'Madeira'.toUpperCase(),
     name: 'wood',
     image: WoodImg,
     isActive: false,

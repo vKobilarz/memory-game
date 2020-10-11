@@ -11,6 +11,11 @@ export const Container = styled.button`
   background-color: transparent;
   border-color: transparent;
 
+  h1 {
+    color: #435049;
+    font-size: 60px;
+  }
+
   p {
     color: #435049;
     font-size: 24px;

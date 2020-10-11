@@ -1,13 +1,19 @@
 import React, { FC, FormEvent, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import { useData } from '../../hooks/DataContext';
 
 import { InstructionsContainer, NameContainer, Content } from './styles';
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+
 const Instructions: FC = () => {
   const history = useHistory();
+  const query = useQuery();
 
   const { createUser } = useData();
   const [name, setName] = useState('');
@@ -22,7 +28,26 @@ const Instructions: FC = () => {
 
     createUser({ name });
 
-    history.push('/introduction');
+    switch (query.get('type')) {
+      case 'wood':
+        history.push('wood01?type=stage-selection');
+        break;
+      case 'paper':
+        history.push('paper01?type=stage-selection');
+        break;
+      case 'glass':
+        history.push('glass01?type=stage-selection');
+        break;
+      case 'iron':
+        history.push('iron01?type=stage-selection');
+        break;
+      case 'plastic':
+        history.push('plastic01?type=stage-selection');
+        break;
+      default:
+        history.push('/introduction');
+        break;
+    }
   }
 
   return (

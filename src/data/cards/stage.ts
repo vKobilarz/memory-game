@@ -108,6 +108,7 @@ import Card from '../../interfaces/Card';
 
 const cards: Card[] = [
   {
+    title: 'Garfo'.toUpperCase(),
     name: 'iron-fork',
     image: IronForkImg,
     description: 'O garfo é um objeto feito de ferro!'.toUpperCase(),
@@ -116,6 +117,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Chave'.toUpperCase(),
     name: 'iron-key',
     image: IronKeyImg,
     description: 'A chave é um objeto feito de ferro!'.toUpperCase(),
@@ -124,6 +126,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Faca'.toUpperCase(),
     name: 'iron-knife',
     image: IronKnifeImg,
     description: 'A faca é um objeto feito de ferro!'.toUpperCase(),
@@ -132,6 +135,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Prego'.toUpperCase(),
     name: 'iron-nail',
     image: IronNailImg,
     description: 'O prego é um objeto feito de ferro!'.toUpperCase(),
@@ -140,6 +144,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Parafuso'.toUpperCase(),
     name: 'iron-screw',
     image: IronCrewImg,
     description: 'O parafuso é um objeto feito de ferro!'.toUpperCase(),
@@ -148,6 +153,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Colher'.toUpperCase(),
     name: 'iron-spoon',
     image: IronSpoonImg,
     description: 'A colher é um objeto feito de ferro!'.toUpperCase(),
@@ -156,6 +162,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Mesa'.toUpperCase(),
     name: 'iron-table',
     image: IronTableImg,
     description: 'A mesa é um objeto feito de ferro!'.toUpperCase(),
@@ -164,6 +171,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Âncora'.toUpperCase(),
     name: 'iron-anchor',
     image: IronAnchorImg,
     description: 'A âncora é um objeto feito de ferro!'.toUpperCase(),
@@ -172,6 +180,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Bigorna'.toUpperCase(),
     name: 'iron-anvil',
     image: IronAnvilImg,
     description: 'A bigorna é um objeto feito de ferro!'.toUpperCase(),
@@ -180,6 +189,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Gaiola'.toUpperCase(),
     name: 'iron-cage',
     image: IronCageImg,
     description: 'A gaiola é um objeto feito de ferro!'.toUpperCase(),
@@ -188,6 +198,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Corrente'.toUpperCase(),
     name: 'iron-chain',
     image: IronChainImg,
     description: 'A corrente é um objeto feito de ferro!'.toUpperCase(),
@@ -196,6 +207,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Altere'.toUpperCase(),
     name: 'iron-bumd-bell',
     image: IronDumbBellImg,
     description: 'O altere é um objeto feito de ferro!'.toUpperCase(),
@@ -204,6 +216,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Frigideira'.toUpperCase(),
     name: 'iron-frying-pan',
     image: IronFryingPanImg,
     description: 'A frigideira é um objeto feito de ferro!'.toUpperCase(),
@@ -212,6 +225,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Grade'.toUpperCase(),
     name: 'iron-grid',
     image: IronGridImg,
     description: 'A grade é um objeto feito de ferro!'.toUpperCase(),
@@ -220,6 +234,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Chaleira'.toUpperCase(),
     name: 'iron-kettle',
     image: IronKettleImg,
     description: 'A chaleira é um objeto feito de ferro!'.toUpperCase(),
@@ -228,6 +243,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Lâmpada'.toUpperCase(),
     name: 'iron-lamp',
     image: IronLampImg,
     description: 'A lâmpada é um objeto feito de ferro!'.toUpperCase(),
@@ -236,6 +252,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Poste'.toUpperCase(),
     name: 'iron-light-pole',
     image: IronLightPoleImg,
     description: 'O poste é um objeto feito de ferro!'.toUpperCase(),
@@ -244,6 +261,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Grampeador'.toUpperCase(),
     name: 'iron-strapler-pole',
     image: IronStraplerImg,
     description: 'O grampeador é um objeto feito de ferro!'.toUpperCase(),
@@ -252,6 +270,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Trem'.toUpperCase(),
     name: 'iron-train',
     image: IronTrainImg,
     description: 'O trem é um objeto feito de ferro!'.toUpperCase(),
@@ -260,6 +279,7 @@ const cards: Card[] = [
     type: ['iron'],
   },
   {
+    title: 'Cadeira'.toUpperCase(),
     name: 'wooden-iron-chair',
     image: WoodenIronChairImg,
     description: 'A cadeira é um objeto feito de ferro e madeira!'.toUpperCase(),
@@ -268,6 +288,7 @@ const cards: Card[] = [
     type: ['iron', 'wood'],
   },
   {
+    title: 'Cama'.toUpperCase(),
     name: 'wooden-bed',
     image: WoodenBedImg,
     description: 'A cama é um objeto feito de madeira!'.toUpperCase(),
@@ -276,6 +297,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Cadeira'.toUpperCase(),
     name: 'wooden-chair',
     image: WoodenChairImg,
     description: 'Esta cadeira é um objeto feito de madeira!'.toUpperCase(),
@@ -284,6 +306,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Porta'.toUpperCase(),
     name: 'wooden-door',
     image: WoodenDoorImg,
     description: 'A porta é um objeto feito de madeira!'.toUpperCase(),
@@ -292,6 +315,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Mesa'.toUpperCase(),
     name: 'wooden-table',
     image: WoodenTableImg,
     description: 'Esta mesa é um objeto feito de madeira!'.toUpperCase(),
@@ -300,6 +324,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Guarda Roupa'.toUpperCase(),
     name: 'wooden-wardrobe',
     image: WoodenWardrobeImg,
     description: 'O guarda roupa é um objeto feito de madeira!'.toUpperCase(),
@@ -308,6 +333,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Banco'.toUpperCase(),
     name: 'wooden-bench',
     image: WoodenBenchImg,
     description: 'O banco é um objeto feito de madeira!'.toUpperCase(),
@@ -316,6 +342,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Placa'.toUpperCase(),
     name: 'wooden-board-1',
     image: WoodenBoard1Img,
     description: 'A placa é um objeto feito de madeira!'.toUpperCase(),
@@ -324,6 +351,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Placa'.toUpperCase(),
     name: 'wooden-board-2',
     image: WoodenBoard2Img,
     description: 'A placa é um objeto feito de madeira!'.toUpperCase(),
@@ -332,6 +360,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Carrinho'.toUpperCase(),
     name: 'wooden-car-1',
     image: WoodenCar1Img,
     description: 'O carrinho é um objeto feito de madeira!'.toUpperCase(),
@@ -340,6 +369,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Carrinho'.toUpperCase(),
     name: 'wooden-car-2',
     image: WoodenCar2Img,
     description: 'O carrinho é um objeto feito de madeira!'.toUpperCase(),
@@ -348,6 +378,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Cadeira'.toUpperCase(),
     name: 'wooden-chair-1',
     image: WoodenChair1Img,
     description: 'A cadeira é um objeto feito de madeira!'.toUpperCase(),
@@ -356,6 +387,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Cadeira'.toUpperCase(),
     name: 'wooden-chair-2',
     image: WoodenChair2Img,
     description: 'A cadeira é um objeto feito de madeira!'.toUpperCase(),
@@ -364,6 +396,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Caixote'.toUpperCase(),
     name: 'wooden-crate',
     image: WoodenCrateImg,
     description: 'O caixote é um objeto feito de madeira!'.toUpperCase(),
@@ -372,6 +405,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Cerca'.toUpperCase(),
     name: 'wooden-fence',
     image: WoodenFenceImg,
     description: 'A cerca é um objeto feito de madeira!'.toUpperCase(),
@@ -380,6 +414,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Cabide'.toUpperCase(),
     name: 'wooden-hanger',
     image: WoodenHangerImg,
     description: 'O cabide é um objeto feito de madeira!'.toUpperCase(),
@@ -388,6 +423,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Escada'.toUpperCase(),
     name: 'wooden-stair-1',
     image: WoodenStair1Img,
     description: 'A escada é um objeto feito de madeira!'.toUpperCase(),
@@ -396,6 +432,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Escada'.toUpperCase(),
     name: 'wooden-stair-2',
     image: WoodenStair2Img,
     description: 'A escada é um objeto feito de madeira!'.toUpperCase(),
@@ -404,6 +441,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Balanço'.toUpperCase(),
     name: 'wooden-swing',
     image: WoodenSwingImg,
     description: 'O balanço é um objeto feito de madeira!'.toUpperCase(),
@@ -412,6 +450,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Mesa'.toUpperCase(),
     name: 'wooden-table-1',
     image: WoodenTable1Img,
     description: 'A mesa é um objeto feito de madeira!'.toUpperCase(),
@@ -420,6 +459,7 @@ const cards: Card[] = [
     type: ['wood'],
   },
   {
+    title: 'Sacola'.toUpperCase(),
     name: 'paper-bag',
     image: PaperBagImg,
     description: 'Esta sacola é um objeto feito de papel!'.toUpperCase(),
@@ -428,6 +468,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Caixa'.toUpperCase(),
     name: 'paper-box',
     image: PaperBoxImg,
     description: 'A caixa é um objeto feito de papel!'.toUpperCase(),
@@ -436,6 +477,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Jornal'.toUpperCase(),
     name: 'paper-journal',
     image: PaperJournalImg,
     description: 'O jornal é um objeto feito de papel!'.toUpperCase(),
@@ -444,6 +486,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Guardanapo'.toUpperCase(),
     name: 'paper-napkin',
     image: PaperNapkinImg,
     description: 'O guardanapo é um objeto feito de papel!'.toUpperCase(),
@@ -452,6 +495,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Folha de Caderno'.toUpperCase(),
     name: 'paper-notebook-sheet',
     image: PaperNotebookSheetImg,
     description: 'A folha de caderno é um objeto feito de papel!'.toUpperCase(),
@@ -460,6 +504,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Papel Higiênico'.toUpperCase(),
     name: 'paper-toilet',
     image: PaperToiletImg,
     description: 'O papel higiênico é um objeto feito de papel!'.toUpperCase(),
@@ -468,6 +513,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Avião'.toUpperCase(),
     name: 'paper-airplane-1',
     image: PaperAirplane1Img,
     description: 'O avião é um objeto feito de papel!'.toUpperCase(),
@@ -476,6 +522,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Avião'.toUpperCase(),
     name: 'paper-airplane-2',
     image: PaperAirplane2Img,
     description: 'O avião é um objeto feito de papel!'.toUpperCase(),
@@ -484,6 +531,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Avião'.toUpperCase(),
     name: 'paper-airplane-3',
     image: PaperAirplane3Img,
     description: 'O avião é um objeto feito de papel!'.toUpperCase(),
@@ -492,6 +540,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Avião'.toUpperCase(),
     name: 'paper-airplane-4',
     image: PaperAirplane4Img,
     description: 'O avião é um objeto feito de papel!'.toUpperCase(),
@@ -500,6 +549,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Caixa'.toUpperCase(),
     name: 'paper-box-1',
     image: PaperBox1Img,
     description: 'A caixa é um objeto feito de papel!'.toUpperCase(),
@@ -508,6 +558,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Caixa'.toUpperCase(),
     name: 'paper-box-2',
     image: PaperBox2Img,
     description: 'A caixa é um objeto feito de papel!'.toUpperCase(),
@@ -516,6 +567,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Caixa'.toUpperCase(),
     name: 'paper-box-3',
     image: PaperBox3Img,
     description: 'A caixa é um objeto feito de papel!'.toUpperCase(),
@@ -524,6 +576,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Caixa'.toUpperCase(),
     name: 'paper-box-4',
     image: PaperBox4Img,
     description: 'A caixa é um objeto feito de papel!'.toUpperCase(),
@@ -532,6 +585,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Guardanapo'.toUpperCase(),
     name: 'paper-napkin-1',
     image: PaperNapkin1Img,
     description: 'O guardanapo é um objeto feito de papel!'.toUpperCase(),
@@ -540,6 +594,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Folha de Caderno'.toUpperCase(),
     name: 'paper-notebook-sheet-1',
     image: PaperNotebookSheet1Img,
     description: 'A folha de caderno é um objeto feito de papel!'.toUpperCase(),
@@ -548,6 +603,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Papiro'.toUpperCase(),
     name: 'paper-papyrus-1',
     image: PaperPapyrus1Img,
     description: 'O papiro de caderno é um objeto feito de papel!'.toUpperCase(),
@@ -556,6 +612,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Papel Higiênico'.toUpperCase(),
     name: 'paper-toilet-1',
     image: PaperToilet1Img,
     description: 'O papel higiênico é um objeto feito de papel!'.toUpperCase(),
@@ -564,6 +621,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Papel Toalha'.toUpperCase(),
     name: 'paper-towel-1',
     image: PaperTowel1Img,
     description: 'O papel toalha é um objeto feito de papel!'.toUpperCase(),
@@ -572,6 +630,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Papel Higiênico'.toUpperCase(),
     name: 'paper-toilet-2',
     image: PaperToilet2Img,
     description: 'O papel higiênico é um objeto feito de papel!'.toUpperCase(),
@@ -580,6 +639,7 @@ const cards: Card[] = [
     type: ['paper'],
   },
   {
+    title: 'Sacola'.toUpperCase(),
     name: 'plastic-bag',
     image: PlasticBagImg,
     description: 'Esta sacola é um objeto feito de plástico!'.toUpperCase(),
@@ -588,6 +648,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Garrafa'.toUpperCase(),
     name: 'plastic-bottle',
     image: PlasticBottleImg,
     description: 'Essa garrafa é um objeto feito de plástico!'.toUpperCase(),
@@ -596,6 +657,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Carrinho'.toUpperCase(),
     name: 'plastic-cart',
     image: PlasticCartImg,
     description: 'O carrinho é um objeto feito de plástico!'.toUpperCase(),
@@ -604,6 +666,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Galão'.toUpperCase(),
     name: 'plastic-gallon',
     image: PlasticGallonImg,
     description: 'O galão é um objeto feito de plástico!'.toUpperCase(),
@@ -612,6 +675,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Lego'.toUpperCase(),
     name: 'plastic-lego',
     image: PlasticLegoImg,
     description: 'O lego é um objeto feito de plástico!'.toUpperCase(),
@@ -620,6 +684,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Esponja'.toUpperCase(),
     name: 'plastic-sponge',
     image: PlasticSpongeImg,
     description: 'A esponja é um objeto feito de plástico!'.toUpperCase(),
@@ -628,6 +693,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Canudo'.toUpperCase(),
     name: 'plastic-straw',
     image: PlasticStrawImg,
     description: 'O canudo é um objeto feito de plástico!'.toUpperCase(),
@@ -636,6 +702,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Seringa'.toUpperCase(),
     name: 'plastic-syringe',
     image: PlasticSyringeImg,
     description: 'A seringa é um objeto feito de plástico!'.toUpperCase(),
@@ -644,6 +711,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Telefone'.toUpperCase(),
     name: 'plastic-telephone',
     image: PlasticTelephoneImg,
     description: 'O telefone é um objeto feito de plástico!'.toUpperCase(),
@@ -652,6 +720,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Sacola'.toUpperCase(),
     name: 'plastic-bag-1',
     image: PlasticBag1Img,
     description: 'A sacola é um objeto feito de plástico!'.toUpperCase(),
@@ -660,6 +729,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Banco'.toUpperCase(),
     name: 'plastic-bench',
     image: PlasticBenchImg,
     description: 'O banco é um objeto feito de plástico!'.toUpperCase(),
@@ -668,6 +738,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Garrafa'.toUpperCase(),
     name: 'plastic-bottle-1',
     image: PlasticBottle1Img,
     description: 'A garrafa é um objeto feito de plástico!'.toUpperCase(),
@@ -676,6 +747,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Garrafa'.toUpperCase(),
     name: 'plastic-bottle-2',
     image: PlasticBottle2Img,
     description: 'A garrafa é um objeto feito de plástico!'.toUpperCase(),
@@ -684,6 +756,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Cadeira'.toUpperCase(),
     name: 'plastic-chair',
     image: PlasticChairImg,
     description: 'A cadeira é um objeto feito de plástico!'.toUpperCase(),
@@ -692,6 +765,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Copo'.toUpperCase(),
     name: 'plastic-cup-1',
     image: PlasticCup1Img,
     description: 'O copo é um objeto feito de plástico!'.toUpperCase(),
@@ -700,6 +774,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Plástico'.toUpperCase(),
     name: 'plastic-cup-2',
     image: PlasticCup2Img,
     description: 'O copo é um objeto feito de plástico!'.toUpperCase(),
@@ -708,6 +783,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Copo'.toUpperCase(),
     name: 'plastic-cup-3',
     image: PlasticCupImg,
     description: 'O copo é um objeto feito de plástico!'.toUpperCase(),
@@ -716,14 +792,16 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Boneco'.toUpperCase(),
     name: 'plastic-doll',
     image: PlasticDollImg,
-    description: 'O copo é um objeto feito de plástico!'.toUpperCase(),
+    description: 'O boneco é um objeto feito de plástico!'.toUpperCase(),
     isActive: false,
     isHidden: false,
     type: ['plastic'],
   },
   {
+    title: 'Lixo'.toUpperCase(),
     name: 'plastic-trash',
     image: PlasticTrashImg,
     description: 'O lixo é um objeto feito de plástico!'.toUpperCase(),
@@ -732,6 +810,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Regador'.toUpperCase(),
     name: 'plastic-watering-can',
     image: PlasticWateringCanImg,
     description: 'O regador é um objeto feito de plástico!'.toUpperCase(),
@@ -740,6 +819,7 @@ const cards: Card[] = [
     type: ['plastic'],
   },
   {
+    title: 'Garrafa'.toUpperCase(),
     name: 'glass-bottle',
     image: GlassBottleImg,
     description: 'Esta garrafa é um objeto feito de vidro!'.toUpperCase(),
@@ -748,6 +828,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Tigela'.toUpperCase(),
     name: 'glass-bowl',
     image: GlassBowlImg,
     description: 'A tigela é um objeto feito de vidro!'.toUpperCase(),
@@ -756,6 +837,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Copo'.toUpperCase(),
     name: 'glass-cup',
     image: GlassCupImg,
     description: 'O copo é um objeto feito de vidro!'.toUpperCase(),
@@ -764,6 +846,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Prato'.toUpperCase(),
     name: 'glass-dish',
     image: GlassDishImg,
     description: 'O prato é um objeto feito de vidro!'.toUpperCase(),
@@ -772,6 +855,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Lâmpada'.toUpperCase(),
     name: 'glass-lamp',
     image: GlassLampImg,
     description: 'A lâmpada é um objeto feito de vidro!'.toUpperCase(),
@@ -780,6 +864,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Tigela'.toUpperCase(),
     name: 'glass-mate',
     image: GlassMateImg,
     description: 'A tigela é um objeto feito de vidro!'.toUpperCase(),
@@ -788,6 +873,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Espelho'.toUpperCase(),
     name: 'glass-mirror',
     image: GlassMirrorImg,
     description: 'O espelho é um objeto feito de vidro!'.toUpperCase(),
@@ -796,6 +882,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Travessa'.toUpperCase(),
     name: 'glass-platter',
     image: GlassPlatterImg,
     description: 'A travessa é um objeto feito de vidro!'.toUpperCase(),
@@ -804,6 +891,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Copo'.toUpperCase(),
     name: 'glass-cup-1',
     image: GlassCup1Img,
     description: 'O copo é um objeto feito de vidro!'.toUpperCase(),
@@ -812,6 +900,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Copo'.toUpperCase(),
     name: 'glass-cup-2',
     image: GlassCup2Img,
     description: 'O copo é um objeto feito de vidro!'.toUpperCase(),
@@ -820,6 +909,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Barra de Vidro'.toUpperCase(),
     name: 'glass-glass-1',
     image: GlassGlass1Img,
     description: 'Esta barra é um objeto feito de vidro!'.toUpperCase(),
@@ -828,6 +918,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Barra de Vidro'.toUpperCase(),
     name: 'glass-glass-2',
     image: GlassGlass2Img,
     description: 'Esta barra é um objeto feito de vidro!'.toUpperCase(),
@@ -836,6 +927,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Barra de Vidro'.toUpperCase(),
     name: 'glass-glass-3',
     image: GlassGlass3Img,
     description: 'Esta barra é um objeto feito de vidro!'.toUpperCase(),
@@ -844,6 +936,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Jarra'.toUpperCase(),
     name: 'glass-jar-1',
     image: GlassJar1Img,
     description: 'A jarra é um objeto feito de vidro!'.toUpperCase(),
@@ -852,6 +945,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Jarra'.toUpperCase(),
     name: 'glass-jar-2',
     image: GlassJar2Img,
     description: 'A jarra é um objeto feito de vidro!'.toUpperCase(),
@@ -860,6 +954,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Lupa'.toUpperCase(),
     name: 'glass-magnifying-glass',
     image: GlassMagnifyingGlassImg,
     description: 'A lupa é um objeto feito de vidro!'.toUpperCase(),
@@ -868,6 +963,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Xícara'.toUpperCase(),
     name: 'glass-tea-cup',
     image: GlassTeaCupImg,
     description: 'A xícara é um objeto feito de vidro!'.toUpperCase(),
@@ -876,6 +972,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Vazo'.toUpperCase(),
     name: 'glass-vase-1',
     image: GlassVase1Img,
     description: 'O vazo é um objeto feito de vidro!'.toUpperCase(),
@@ -884,6 +981,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Vazo'.toUpperCase(),
     name: 'glass-vase-2',
     image: GlassVase2Img,
     description: 'O vazo é um objeto feito de vidro!'.toUpperCase(),
@@ -892,6 +990,7 @@ const cards: Card[] = [
     type: ['glass'],
   },
   {
+    title: 'Janela'.toUpperCase(),
     name: 'glass-window',
     image: GlassWindowImg,
     description: 'A janela é um objeto feito de vidro!'.toUpperCase(),
