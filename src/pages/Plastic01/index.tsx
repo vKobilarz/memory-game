@@ -1,6 +1,6 @@
 import React, { FC, useMemo, useState } from 'react';
 
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
@@ -16,9 +16,14 @@ import { Content, CardContainer, LostPanelContainer } from './styles';
 const type = 'plastic';
 const title = 'SELECIONE SOMENTE OS OBJETOS DE PLÁSTICO';
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 const Plastic01: FC = () => {
   const { setStageData } = useData();
   const history = useHistory();
+  const query = useQuery();
 
   const startDate = useMemo<Date>(() => new Date(), []);
 
@@ -49,7 +54,11 @@ const Plastic01: FC = () => {
         stage: 'plastic1',
       });
 
-      history.push('/wood02');
+      if (query.get('type') === 'stage-selection') {
+        history.push('plastic02?type=stage-selection');
+      } else {
+        history.push('/wood02');
+      }
     }
   }
 

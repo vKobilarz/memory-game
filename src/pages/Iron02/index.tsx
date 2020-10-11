@@ -1,6 +1,6 @@
 import React, { FC, useMemo, useState } from 'react';
 
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
@@ -13,12 +13,18 @@ import SelectedCardPanel from '../../components/SelectedCardPanel';
 
 import { Content, CardContainer, LostPanelContainer } from './styles';
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+
 const type = 'iron';
 const title = 'SELECIONE SOMENTE OS OBJETOS DE FERRO';
 
 const Iron02: FC = () => {
   const { setStageData } = useData();
   const history = useHistory();
+  const query = useQuery();
 
   const startDate = useMemo<Date>(() => new Date(), []);
 
@@ -49,7 +55,11 @@ const Iron02: FC = () => {
         stage: 'iron2',
       });
 
-      history.push('/plastic02');
+      if (query.get('type') === 'stage-selection') {
+        history.push('/');
+      } else {
+        history.push('/plastic02');
+      }
     }
   }
 

@@ -1,6 +1,6 @@
 import React, { FC, useMemo, useState } from 'react';
 
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
@@ -16,9 +16,14 @@ import { Content, CardContainer, LostPanelContainer } from './styles';
 const type = 'paper';
 const title = 'SELECIONE SOMENTE OS OBJETOS DE PAPEL';
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 const Paper02: FC = () => {
   const { setStageData } = useData();
   const history = useHistory();
+  const query = useQuery();
 
   const startDate = useMemo<Date>(() => new Date(), []);
 
@@ -49,7 +54,11 @@ const Paper02: FC = () => {
         stage: 'paper2',
       });
 
-      history.push('/glass02');
+      if (query.get('type') === 'stage-selection') {
+        history.push('/');
+      } else {
+        history.push('/glass02');
+      }
     }
   }
 

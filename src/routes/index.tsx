@@ -18,10 +18,12 @@ import Plastic02 from '../pages/Plastic02';
 import FinishedGame from '../pages/FinishedGame';
 import Credits from '../pages/Credits';
 import Tutorial from '../pages/Tutorial';
+import StageSelection from '../pages/StageSelection';
 
 const Routes: FC = () => (
   <Switch>
     <Route path="/" exact component={Home} />
+    <Route path="/stage-selection" exact component={StageSelection} />
     <Route path="/instructions" component={Instructions} />
     <Route path="/stats" component={Stats} />
     <Route path="/tutorial" component={Tutorial} />

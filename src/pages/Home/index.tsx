@@ -13,6 +13,9 @@ const Home = () => {
         <Link to="/instructions">
           <h2>INICIAR</h2>
         </Link>
+        <Link to={'/stage-selection'}>
+          <h3>SELEÇÃO DE FASES</h3>
+        </Link>
         <Link to={'/tutorial'}>
           <h3>TUTORIAL</h3>
         </Link>

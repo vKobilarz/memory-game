@@ -1,6 +1,6 @@
 import React, { FC, useMemo, useState } from 'react';
 
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
@@ -16,9 +16,14 @@ import { Content, CardContainer, LostPanelContainer } from './styles';
 const type = 'wood';
 const title = 'SELECIONE SOMENTE OS OBJETOS DE MADEIRA';
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 const Wood01: FC = () => {
   const { setStageData } = useData();
   const history = useHistory();
+  const query = useQuery();
 
   const startDate = useMemo<Date>(() => new Date(), []);
 
@@ -49,7 +54,11 @@ const Wood01: FC = () => {
         stage: 'wood1',
       });
 
-      history.push('/paper01');
+      if (query.get('type') === 'stage-selection') {
+        history.push('wood02?type=stage-selection');
+      } else {
+        history.push('/paper01');
+      }
     }
   }
 

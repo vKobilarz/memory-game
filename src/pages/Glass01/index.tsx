@@ -1,6 +1,6 @@
 import React, { FC, useMemo, useState } from 'react';
 
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 import Container from '../../components/Container';
 import ICard from '../../interfaces/Card';
@@ -16,9 +16,14 @@ import { Content, CardContainer, LostPanelContainer } from './styles';
 const type = 'glass';
 const title = 'SELECIONE SOMENTE OS OBJETOS DE VIDRO';
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 const Glass01: FC = () => {
   const { setStageData } = useData();
   const history = useHistory();
+  const query = useQuery();
 
   const startDate = useMemo<Date>(() => new Date(), []);
 
@@ -49,7 +54,11 @@ const Glass01: FC = () => {
         stage: 'glass1',
       });
 
-      history.push('/iron01');
+      if (query.get('type') === 'stage-selection') {
+        history.push('glass02?type=stage-selection');
+      } else {
+        history.push('/iron01');
+      }
     }
   }
 
